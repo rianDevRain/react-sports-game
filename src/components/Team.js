@@ -18,7 +18,7 @@ export default class Team extends Component {
 
      shotHandler = () => {
         let score = this.state.score;
-        // this.shotSound.play();
+        this.shotSound.play();
         if (Math.random() > 0.5) {
             score += 1;
 
