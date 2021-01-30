@@ -31,6 +31,7 @@ export default  class Game extends Component {
     }
 
     shoot = (team) => {
+        console.log(team)
         const teamStatsKey = `${team}TeamStats`
         let score = this.state[teamStatsKey].score
         this.shotSound.play()
@@ -86,17 +87,17 @@ export default  class Game extends Component {
         
         <div className="versus">
             <h1>VS</h1>
-            <div>
+            
                 <strong>Resets:</strong> {this.state.resetCount}
-                <button onClick={this.resetGame}>Reset Game</button>
-            </div>
+                <button className="buttons"  onClick={this.resetGame}>Reset Game</button>
+            
         </div>
         
             <Team 
                 name={this.props.homeTeam.name} 
                 logo={this.props.homeTeam.logoSrc}
                 stats={this.state.homeTeamStats}
-                shotHanler={() => this.shoot('home')}
+                shotHandler={() => this.shoot('home')}
             />
             </div>
         </div>

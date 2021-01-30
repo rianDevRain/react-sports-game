@@ -27,7 +27,7 @@ export default function Team(props) {
 				<strong>Score:</strong> {props.stats.score}
 			</div>
 			<div>{shotPercentageDiv}</div>
-			<button className="buttons" onClick={props.shotHanler}>
+			<button className="buttons" onClick={props.shotHandler}>
 				Shoot:
 			</button>
 		</div>
